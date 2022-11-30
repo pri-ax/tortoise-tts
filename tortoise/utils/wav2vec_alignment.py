@@ -132,6 +132,8 @@ class Wav2VecAlignment:
             fully_split.extend(spl.split(']'))
 
         # At this point, fully_split is a list of strings, with every other string being something that should be redacted.
+        print(f"expected_text: {expected_text}")
+        print(f"fully_split: {fully_split}")
         non_redacted_intervals = []
         last_point = 0
         for i in range(len(fully_split)):
